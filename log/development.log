@@ -11050,3 +11050,123 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 1235)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/hieudz/Videos/nhat_nganh/ruby_on_rails/config/environment.rb:5)
+Started GET "/" for ::1 at 2021-12-12 10:07:37 +0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (Duration: 36.8ms | Allocations: 9341)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 66.5ms | Allocations: 21238)
+Completed 200 OK in 425ms (Views: 413.7ms | ActiveRecord: 2.6ms | Allocations: 366808)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f4c55e5fa29c224e1d630d43cf82149cbaab3f4f/anh.png" for ::1 at 2021-12-12 10:07:38 +0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f4c55e5fa29c224e1d630d43cf82149cbaab3f4f", "filename"=>"anh"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[36m  Disk Storage (16.7ms) [0m[34mGenerated URL for file at key: opkd8640qdt3kuqlndo5vt27kxed (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhiM0JyWkRnMk5EQnhaSFF6YTNWeGJHNWtielYyZERJM2EzaGxaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdWFDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJGdWFDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIxLTEyLTEyVDAzOjEyOjM4LjExMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4f20d1f0886c1d12848bb0e8057212b450b51354/anh.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22anh.png%22%3B+filename%2A%3DUTF-8%27%27anh.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhiM0JyWkRnMk5EQnhaSFF6YTNWeGJHNWtielYyZERJM2EzaGxaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdWFDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJGdWFDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIxLTEyLTEyVDAzOjEyOjM4LjExMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4f20d1f0886c1d12848bb0e8057212b450b51354/anh.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22anh.png%22%3B+filename%2A%3DUTF-8%27%27anh.png
+Completed 302 Found in 27ms (ActiveRecord: 0.4ms | Allocations: 5084)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhiM0JyWkRnMk5EQnhaSFF6YTNWeGJHNWtielYyZERJM2EzaGxaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdWFDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJGdWFDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIxLTEyLTEyVDAzOjEyOjM4LjExMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4f20d1f0886c1d12848bb0e8057212b450b51354/anh.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22anh.png%22%3B+filename%2A%3DUTF-8%27%27anh.png" for ::1 at 2021-12-12 10:07:38 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"anh.png\"; filename*=UTF-8''anh.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhiM0JyWkRnMk5EQnhaSFF6YTNWeGJHNWtielYyZERJM2EzaGxaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdWFDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJGdWFDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIxLTEyLTEyVDAzOjEyOjM4LjExMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4f20d1f0886c1d12848bb0e8057212b450b51354", "filename"=>"anh"}
+Completed 200 OK in 10ms (ActiveRecord: 0.0ms | Allocations: 5458)
+
+
+Started GET "/stories" for ::1 at 2021-12-12 10:07:39 +0700
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 6167)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 11.2ms | Allocations: 1357)
+Completed 200 OK in 111ms (Views: 96.1ms | ActiveRecord: 3.1ms | Allocations: 46061)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhiM0JyWkRnMk5EQnhaSFF6YTNWeGJHNWtielYyZERJM2EzaGxaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdWFDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJGdWFDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIxLTEyLTEyVDAzOjEyOjM4LjExMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4f20d1f0886c1d12848bb0e8057212b450b51354/anh.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22anh.png%22%3B+filename%2A%3DUTF-8%27%27anh.png" for ::1 at 2021-12-12 10:07:40 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"anh.png\"; filename*=UTF-8''anh.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhiM0JyWkRnMk5EQnhaSFF6YTNWeGJHNWtielYyZERJM2EzaGxaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdWFDNXdibWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJGdWFDNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDIxLTEyLTEyVDAzOjEyOjM4LjExMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4f20d1f0886c1d12848bb0e8057212b450b51354", "filename"=>"anh"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 1237)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/hieudz/Videos/nhat_nganh/ruby_on_rails/config/environment.rb:5)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mStory Load (0.4ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  [1m[36mStory Destroy (0.2ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = ?[0m  [["id", 1]]
+  [1m[36mStory Destroy (6.7ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = ?[0m  [["id", 2]]
+  [1m[36mStory Destroy (6.7ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = ?[0m  [["id", 3]]
+  [1m[36mStory Destroy (6.6ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = ?[0m  [["id", 4]]
+  [1m[36mStory Destroy (6.7ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = ?[0m  [["id", 5]]
+  [1m[36mStory Destroy (6.9ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = ?[0m  [["id", 6]]
+  [1m[36mStory Destroy (0.2ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = ?[0m  [["id", 7]]
+  [1m[36mStory Destroy (0.2ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = ?[0m  [["id", 8]]
+  [1m[36mStory Destroy (6.5ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = ?[0m  [["id", 9]]
+  [1m[36mStory Destroy (7.8ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = ?[0m  [["id", 10]]
+  [1m[36mStory Load (0.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Destroy (6.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mUser Destroy (6.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mFood Destroy (6.5ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = ?[0m  [["id", 1]]
+  [1m[36mFood Destroy (6.4ms)[0m  [1m[31mDELETE FROM "foods"[0m
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Destroy (6.7ms)[0m  [1m[31mDELETE FROM "categories"[0m
+Started GET "/stories" for ::1 at 2021-12-12 10:11:18 +0700
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 172)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 6.1ms | Allocations: 767)
+Completed 200 OK in 90ms (Views: 87.5ms | ActiveRecord: 0.3ms | Allocations: 35217)
+
+
+Started GET "/stories" for ::1 at 2021-12-12 10:11:18 +0700
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.1ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 163)
+  Rendered layouts/_navigation.html.erb (Duration: 0.6ms | Allocations: 198)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.1ms | Allocations: 34536)
+
+
+Started GET "/stories" for ::1 at 2021-12-12 10:11:19 +0700
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.4ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 163)
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 198)
+Completed 200 OK in 59ms (Views: 54.8ms | ActiveRecord: 0.4ms | Allocations: 34538)
+
+
+Started GET "/" for ::1 at 2021-12-12 10:11:22 +0700
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 144)
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 160)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.0ms | Allocations: 34466)
+
+

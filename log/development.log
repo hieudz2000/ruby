@@ -11170,3 +11170,28 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.0ms | Allocations: 34466)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/cabox/workspace/ruby/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/cabox/workspace/ruby/config/environment.rb:5)
+Started GET "/" for 222.254.31.19 at 2021-12-12 09:10:25 -0500
+Cannot render console from 222.254.31.19! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 769)
+  Rendered layouts/_navigation.html.erb (Duration: 7.9ms | Allocations: 661)
+Completed 200 OK in 4695ms (Views: 4681.0ms | ActiveRecord: 0.0ms | Allocations: 2525617)
+
+

@@ -56,4 +56,5 @@ Rails.application.configure do
   config.active_storage.service = :local
   
   config.hosts << "f3d9593013aa4a5f8724e2e429d9b6a0.vfs.cloud9.us-east-1.amazonaws.com"
+  config.hosts.clear
 end

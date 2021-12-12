@@ -4,15 +4,14 @@
  
     <h3>Category</h3>
 
-    <h2 style="text-align: middle; font-style: italic; color:blue;margin-left:100px;"> <b><%= @category.name %></b></h2>
+    <h2 style="text-align: middle; font-style: italic; color:blue;margin-left:100px;"><b><%= @category.name %></b></h2>
 
     <h4> Foods under this category </h4>
         <ul>
           <% Food.where(category_id: @category.id).each do |food| %>
             <li>
               <h4 style="text-align: middle; font-style: italic; color:green;"><%= food.name %></h4>
-            </li>
-            
+            </li>    
           <% end %>
         </ul>
 

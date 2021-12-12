@@ -11170,3 +11170,570 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.0ms | Allocations: 34466)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/ubuntu/ruby/config/environment.rb:5)
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/ubuntu/ruby/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> Coffee::Rails::TemplateHandler.call(template)
+To:
+  >> Coffee::Rails::TemplateHandler.call(template, source)
+ (called from <top (required)> at /home/ubuntu/ruby/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2021-12-12 13:00:53 +0000
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 584)
+  Rendered layouts/_navigation.html.erb (Duration: 2.1ms | Allocations: 636)
+Completed 200 OK in 5296ms (Views: 5286.6ms | ActiveRecord: 0.0ms | Allocations: 2560897)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 13:01:02 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 137)
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 158)
+Completed 200 OK in 73ms (Views: 70.8ms | ActiveRecord: 0.0ms | Allocations: 34819)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-12-12 13:01:06 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.5ms | Allocations: 511)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 63.9ms | Allocations: 6161)
+  Rendered layouts/_navigation.html.erb (Duration: 0.7ms | Allocations: 183)
+Completed 200 OK in 234ms (Views: 189.9ms | ActiveRecord: 1.4ms | Allocations: 50420)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-12-12 13:01:13 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_new_html_erb__2201788236924060780_32300 at /home/ubuntu/ruby/app/views/devise/registrations/new.html.erb:12)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 115)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.1ms | Allocations: 1914)
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 183)
+Completed 200 OK in 106ms (Views: 98.8ms | ActiveRecord: 0.0ms | Allocations: 37298)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-12-12 13:01:36 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mp1vPHHcV6YUuWyo4LSlgFWbJTloMQCkddUcoc5HRbPAFtYEH/gyeLwZJMHSetHqjtf9P4NgRlmxpsH10XyEgA==", "user"=>{"name"=>"dutran", "email"=>"ductcp@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ductcp@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "ductcp@gmail.com"], ["encrypted_password", "$2a$11$Pz2nHXYpaJ45qkdPXJWGvet1oOGsecy9qXIRRGlrVJakSVvXwyhSa"], ["created_at", "2021-12-12 13:01:36.770744"], ["updated_at", "2021-12-12 13:01:36.770744"], ["name", "dutran"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2021-12-12 13:01:36.780792"], ["last_sign_in_at", "2021-12-12 13:01:36.780792"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2021-12-12 13:01:36.781038"], ["id", 5]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://localhost-ductcp-1-it-nihongo3-ruby.paiza-user-free.cloud:3000/
+Completed 302 Found in 225ms (ActiveRecord: 11.2ms | Allocations: 8649)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 13:01:37 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 441)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 58.5ms | Allocations: 4797)
+Completed 200 OK in 129ms (Views: 126.5ms | ActiveRecord: 1.5ms | Allocations: 39572)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2021-12-12 13:01:51 +0000
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 4.6ms | Allocations: 900)
+  Rendered categories/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1244)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 4.2ms | Allocations: 672)
+Completed 200 OK in 141ms (Views: 114.3ms | ActiveRecord: 2.0ms | Allocations: 40274)
+
+
+Started POST "/categories" for 127.0.0.1 at 2021-12-12 13:01:54 +0000
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Lwx8voIyw63elFAiW9mxpVNQkb/yb1pVxaIkA6ZqysWN4jKlCyu0B/aGSm7oRKsTgGaQBSY+5STZVXEEaJqGA==", "category"=>{"name"=>"Luxury"}, "commit"=>"Create Category"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Luxury"], ["created_at", "2021-12-12 13:01:54.712733"], ["updated_at", "2021-12-12 13:01:54.712733"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://localhost-ductcp-1-it-nihongo3-ruby.paiza-user-free.cloud:3000/categories/5
+Completed 302 Found in 18ms (ActiveRecord: 7.0ms | Allocations: 2696)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2021-12-12 13:01:54 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."category_id" = ?[0m  [["category_id", 5]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2189)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 3.0ms | Allocations: 673)
+Completed 200 OK in 85ms (Views: 78.7ms | ActiveRecord: 1.9ms | Allocations: 37824)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2021-12-12 13:01:56 +0000
+Processing by StoriesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  Rendering stories/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 186)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered stories/_form.html.erb (Duration: 11.5ms | Allocations: 2964)
+  Rendered stories/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 3252)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 3.2ms | Allocations: 676)
+Completed 200 OK in 110ms (Views: 76.3ms | ActiveRecord: 2.0ms | Allocations: 46830)
+
+
+Started POST "/stories" for 127.0.0.1 at 2021-12-12 13:02:20 +0000
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Na6QdLGnIH9uJGL2dWtditeATBLx5LAZtXaIN/H9gdnHJSlM34NFocaEKp9HpSngDMyUFBq19uRxBVVj7sZA6g==", "story"=>{"title"=>"Bun Dau mam tom va nhung ng ban", "location"=>"Ha noi", "food"=>{"name"=>"Bun Dau mam tom"}, "content"=>"abcxyz", "recommendation"=>"Ngon lam moi nguoi oi an thu di", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f8fe2aa3060 @tempfile=#<Tempfile:/tmp/RackMultipart20211212-3281-518w2r.png>, @original_filename="fireworks.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"story[image]\"; filename=\"fireworks.png\"\r\nContent-Type: image/png\r\n">}, "category"=>"5", "commit"=>"Create Story"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[31mUnpermitted parameter: :food[0m
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."name" = ? LIMIT ?[0m  [["name", "Bun Dau mam tom"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFood Create (0.6ms)[0m  [1m[32mINSERT INTO "foods" ("name", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?)[0m  [["name", "Bun Dau mam tom"], ["created_at", "2021-12-12 13:02:20.562243"], ["updated_at", "2021-12-12 13:02:20.562243"], ["category_id", 5]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStory Create (0.6ms)[0m  [1m[32mINSERT INTO "stories" ("title", "content", "location", "user_id", "recommendation", "created_at", "updated_at", "food_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Bun Dau mam tom va nhung ng ban"], ["content", "abcxyz"], ["location", "Ha noi"], ["user_id", 5], ["recommendation", "Ngon lam moi nguoi oi an thu di"], ["created_at", "2021-12-12 13:02:20.576144"], ["updated_at", "2021-12-12 13:02:20.576144"], ["food_id", 12]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Story"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Story"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "rvt9jkdbvtla0qkoqm4ohfttv5ii"], ["filename", "fireworks.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 28156], ["checksum", "bkpNF1THTogx4BtTccvmCg=="], ["created_at", "2021-12-12 13:02:20.687037"]]
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Story"], ["record_id", 11], ["blob_id", 11], ["created_at", "2021-12-12 13:02:20.689147"]]
+  [1m[36mStory Update (0.2ms)[0m  [1m[33mUPDATE "stories" SET "updated_at" = ? WHERE "stories"."id" = ?[0m  [["updated_at", "2021-12-12 13:02:20.690719"], ["id", 11]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+[36m  Disk Storage (1.7ms) [0m[32mUploaded file to key: rvt9jkdbvtla0qkoqm4ohfttv5ii (checksum: bkpNF1THTogx4BtTccvmCg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 3a078ad9-360c-47f4-b148-0dd05d6cb33a) to Async(default) with arguments: #<GlobalID:0x00007f8fe299b618 @uri=#<URI::GID gid://food-travels-rails-app/ActiveStorage::Blob/11>>
+Redirected to https://localhost-ductcp-1-it-nihongo3-ruby.paiza-user-free.cloud:3000/stories/11
+Completed 302 Found in 257ms (ActiveRecord: 15.7ms | Allocations: 38222)
+
+
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a078ad9-360c-47f4-b148-0dd05d6cb33a] Performing ActiveStorage::AnalyzeJob (Job ID: 3a078ad9-360c-47f4-b148-0dd05d6cb33a) from Async(default) enqueued at 2021-12-12T13:02:20Z with arguments: #<GlobalID:0x00007f8fe298b420 @uri=#<URI::GID gid://food-travels-rails-app/ActiveStorage::Blob/11>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a078ad9-360c-47f4-b148-0dd05d6cb33a] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: rvt9jkdbvtla0qkoqm4ohfttv5ii[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a078ad9-360c-47f4-b148-0dd05d6cb33a] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a078ad9-360c-47f4-b148-0dd05d6cb33a]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a078ad9-360c-47f4-b148-0dd05d6cb33a]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 11]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a078ad9-360c-47f4-b148-0dd05d6cb33a]   [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3a078ad9-360c-47f4-b148-0dd05d6cb33a] Performed ActiveStorage::AnalyzeJob (Job ID: 3a078ad9-360c-47f4-b148-0dd05d6cb33a) from Async(default) in 27.33ms
+Started GET "/stories/11" for 127.0.0.1 at 2021-12-12 13:02:20 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mStory Load (0.4ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering stories/show.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."story_id" = ? ORDER BY created_at DESC[0m  [["story_id", 11]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Story"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered stories/show.html.erb within layouts/application (Duration: 14.8ms | Allocations: 4489)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 2.7ms | Allocations: 668)
+Completed 200 OK in 148ms (Views: 78.1ms | ActiveRecord: 3.8ms | Allocations: 48248)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e60abaec57f76e3b8960e93a31c3c0daebb82500/fireworks.png" for 127.0.0.1 at 2021-12-12 13:02:21 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e60abaec57f76e3b8960e93a31c3c0daebb82500", "filename"=>"fireworks"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[36m  Disk Storage (1.5ms) [0m[34mGenerated URL for file at key: rvt9jkdbvtla0qkoqm4ohfttv5ii (https://localhost-ductcp-1-it-nihongo3-ruby.paiza-user-free.cloud:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjblowT1dwclpHSjJkR3hoTUhGcmIzRnRORzlvWm5SMGRqVnBhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGNtVjNiM0pyY3k1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMlpwY21WM2IzSnJjeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAyMS0xMi0xMlQxMzowNzoyMS4zMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b676bd61256c495f8f17bf7b9f16139aa4280c52/fireworks.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22fireworks.png%22%3B+filename%2A%3DUTF-8%27%27fireworks.png)[0m
+Redirected to https://localhost-ductcp-1-it-nihongo3-ruby.paiza-user-free.cloud:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjblowT1dwclpHSjJkR3hoTUhGcmIzRnRORzlvWm5SMGRqVnBhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGNtVjNiM0pyY3k1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMlpwY21WM2IzSnJjeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAyMS0xMi0xMlQxMzowNzoyMS4zMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b676bd61256c495f8f17bf7b9f16139aa4280c52/fireworks.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22fireworks.png%22%3B+filename%2A%3DUTF-8%27%27fireworks.png
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms | Allocations: 2022)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjblowT1dwclpHSjJkR3hoTUhGcmIzRnRORzlvWm5SMGRqVnBhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGNtVjNiM0pyY3k1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMlpwY21WM2IzSnJjeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAyMS0xMi0xMlQxMzowNzoyMS4zMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b676bd61256c495f8f17bf7b9f16139aa4280c52/fireworks.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22fireworks.png%22%3B+filename%2A%3DUTF-8%27%27fireworks.png" for 127.0.0.1 at 2021-12-12 13:02:21 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"fireworks.png\"; filename*=UTF-8''fireworks.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjblowT1dwclpHSjJkR3hoTUhGcmIzRnRORzlvWm5SMGRqVnBhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGNtVjNiM0pyY3k1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMlpwY21WM2IzSnJjeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAyMS0xMi0xMlQxMzowNzoyMS4zMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b676bd61256c495f8f17bf7b9f16139aa4280c52", "filename"=>"fireworks"}
+Completed 200 OK in 10ms (ActiveRecord: 0.0ms | Allocations: 5391)
+
+
+Started GET "/stories" for 127.0.0.1 at 2021-12-12 13:02:34 +0000
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 428)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 4.2ms | Allocations: 923)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.8ms | Allocations: 35807)
+
+
+Started GET "/stories/11" for 127.0.0.1 at 2021-12-12 13:02:37 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mStory Load (0.1ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering stories/show.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."story_id" = ? ORDER BY created_at DESC[0m  [["story_id", 11]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Story"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered stories/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1896)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 2.4ms | Allocations: 660)
+Completed 200 OK in 81ms (Views: 73.0ms | ActiveRecord: 1.8ms | Allocations: 37788)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjblowT1dwclpHSjJkR3hoTUhGcmIzRnRORzlvWm5SMGRqVnBhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGNtVjNiM0pyY3k1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMlpwY21WM2IzSnJjeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAyMS0xMi0xMlQxMzowNzoyMS4zMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b676bd61256c495f8f17bf7b9f16139aa4280c52/fireworks.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22fireworks.png%22%3B+filename%2A%3DUTF-8%27%27fireworks.png" for 127.0.0.1 at 2021-12-12 13:02:37 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"fireworks.png\"; filename*=UTF-8''fireworks.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjblowT1dwclpHSjJkR3hoTUhGcmIzRnRORzlvWm5SMGRqVnBhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGNtVjNiM0pyY3k1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMlpwY21WM2IzSnJjeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAyMS0xMi0xMlQxMzowNzoyMS4zMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b676bd61256c495f8f17bf7b9f16139aa4280c52", "filename"=>"fireworks"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 1170)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 13:02:48 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 339)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 3.4ms | Allocations: 662)
+Completed 200 OK in 73ms (Views: 70.7ms | ActiveRecord: 0.5ms | Allocations: 35281)
+
+
+Started GET "/stories" for 127.0.0.1 at 2021-12-12 13:02:50 +0000
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 202)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 3.6ms | Allocations: 914)
+Completed 200 OK in 65ms (Views: 63.2ms | ActiveRecord: 0.6ms | Allocations: 35452)
+
+
+Started GET "/stories/11" for 127.0.0.1 at 2021-12-12 13:02:52 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mStory Load (0.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering stories/show.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."story_id" = ? ORDER BY created_at DESC[0m  [["story_id", 11]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Story"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered stories/show.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1885)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 3.1ms | Allocations: 660)
+Completed 200 OK in 94ms (Views: 83.3ms | ActiveRecord: 2.2ms | Allocations: 37774)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjblowT1dwclpHSjJkR3hoTUhGcmIzRnRORzlvWm5SMGRqVnBhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGNtVjNiM0pyY3k1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMlpwY21WM2IzSnJjeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAyMS0xMi0xMlQxMzowNzoyMS4zMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b676bd61256c495f8f17bf7b9f16139aa4280c52/fireworks.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22fireworks.png%22%3B+filename%2A%3DUTF-8%27%27fireworks.png" for 127.0.0.1 at 2021-12-12 13:02:53 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"fireworks.png\"; filename*=UTF-8''fireworks.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjblowT1dwclpHSjJkR3hoTUhGcmIzRnRORzlvWm5SMGRqVnBhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGNtVjNiM0pyY3k1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMlpwY21WM2IzSnJjeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAyMS0xMi0xMlQxMzowNzoyMS4zMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b676bd61256c495f8f17bf7b9f16139aa4280c52", "filename"=>"fireworks"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 1168)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 13:05:38 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 332)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 2.6ms | Allocations: 656)
+Completed 200 OK in 84ms (Views: 81.7ms | ActiveRecord: 0.5ms | Allocations: 35279)
+
+
+Started GET "/stories" for 127.0.0.1 at 2021-12-12 13:05:40 +0000
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 202)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 3.8ms | Allocations: 914)
+Completed 200 OK in 66ms (Views: 63.8ms | ActiveRecord: 0.6ms | Allocations: 35466)
+
+
+Started GET "/stories/11" for 127.0.0.1 at 2021-12-12 13:05:41 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mStory Load (0.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering stories/show.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."story_id" = ? ORDER BY created_at DESC[0m  [["story_id", 11]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Story"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered stories/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1886)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 2.6ms | Allocations: 660)
+Completed 200 OK in 75ms (Views: 67.3ms | ActiveRecord: 1.8ms | Allocations: 37776)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjblowT1dwclpHSjJkR3hoTUhGcmIzRnRORzlvWm5SMGRqVnBhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGNtVjNiM0pyY3k1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMlpwY21WM2IzSnJjeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAyMS0xMi0xMlQxMzowNzoyMS4zMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b676bd61256c495f8f17bf7b9f16139aa4280c52/fireworks.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22fireworks.png%22%3B+filename%2A%3DUTF-8%27%27fireworks.png" for 127.0.0.1 at 2021-12-12 13:05:41 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"fireworks.png\"; filename*=UTF-8''fireworks.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjblowT1dwclpHSjJkR3hoTUhGcmIzRnRORzlvWm5SMGRqVnBhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGNtVjNiM0pyY3k1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMlpwY21WM2IzSnJjeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAyMS0xMi0xMlQxMzowNzoyMS4zMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b676bd61256c495f8f17bf7b9f16139aa4280c52", "filename"=>"fireworks"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 1168)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 13:08:08 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 332)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 3.1ms | Allocations: 656)
+Completed 200 OK in 73ms (Views: 70.9ms | ActiveRecord: 0.5ms | Allocations: 35264)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 13:14:10 +0000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 369)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 3.4ms | Allocations: 673)
+Completed 200 OK in 81ms (Views: 76.5ms | ActiveRecord: 0.9ms | Allocations: 35318)
+
+
+Started GET "/stories" for 127.0.0.1 at 2021-12-12 13:14:11 +0000
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.4ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 227)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 4.0ms | Allocations: 914)
+Completed 200 OK in 73ms (Views: 69.4ms | ActiveRecord: 0.8ms | Allocations: 35462)
+
+
+Started GET "/stories/11" for 127.0.0.1 at 2021-12-12 13:14:19 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mStory Load (0.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering stories/show.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."story_id" = ? ORDER BY created_at DESC[0m  [["story_id", 11]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Story"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered stories/show.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1921)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 2.6ms | Allocations: 660)
+Completed 200 OK in 79ms (Views: 69.8ms | ActiveRecord: 2.1ms | Allocations: 37906)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e60abaec57f76e3b8960e93a31c3c0daebb82500/fireworks.png" for 127.0.0.1 at 2021-12-12 13:14:19 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e60abaec57f76e3b8960e93a31c3c0daebb82500", "filename"=>"fireworks"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: rvt9jkdbvtla0qkoqm4ohfttv5ii (https://localhost-ductcp-1-it-nihongo3-ruby.paiza-user-free.cloud:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjblowT1dwclpHSjJkR3hoTUhGcmIzRnRORzlvWm5SMGRqVnBhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGNtVjNiM0pyY3k1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMlpwY21WM2IzSnJjeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAyMS0xMi0xMlQxMzoxOToxOS45MDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--748e400eddb77c515fa3eea05a19d9f6e4751a7e/fireworks.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22fireworks.png%22%3B+filename%2A%3DUTF-8%27%27fireworks.png)[0m
+Redirected to https://localhost-ductcp-1-it-nihongo3-ruby.paiza-user-free.cloud:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjblowT1dwclpHSjJkR3hoTUhGcmIzRnRORzlvWm5SMGRqVnBhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGNtVjNiM0pyY3k1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMlpwY21WM2IzSnJjeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAyMS0xMi0xMlQxMzoxOToxOS45MDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--748e400eddb77c515fa3eea05a19d9f6e4751a7e/fireworks.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22fireworks.png%22%3B+filename%2A%3DUTF-8%27%27fireworks.png
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1582)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjblowT1dwclpHSjJkR3hoTUhGcmIzRnRORzlvWm5SMGRqVnBhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGNtVjNiM0pyY3k1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMlpwY21WM2IzSnJjeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAyMS0xMi0xMlQxMzoxOToxOS45MDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--748e400eddb77c515fa3eea05a19d9f6e4751a7e/fireworks.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22fireworks.png%22%3B+filename%2A%3DUTF-8%27%27fireworks.png" for 127.0.0.1 at 2021-12-12 13:14:20 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"fireworks.png\"; filename*=UTF-8''fireworks.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhjblowT1dwclpHSjJkR3hoTUhGcmIzRnRORzlvWm5SMGRqVnBhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGNtVjNiM0pyY3k1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMlpwY21WM2IzSnJjeTV3Ym1jR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnNXBiV0ZuWlM5d2JtY0dPd1pVIiwiZXhwIjoiMjAyMS0xMi0xMlQxMzoxOToxOS45MDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--748e400eddb77c515fa3eea05a19d9f6e4751a7e", "filename"=>"fireworks"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 1179)
+
+
+Started GET "/stories" for 127.0.0.1 at 2021-12-12 13:17:26 +0000
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 202)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 5.1ms | Allocations: 914)
+Completed 200 OK in 83ms (Views: 79.5ms | ActiveRecord: 0.7ms | Allocations: 35434)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 13:17:33 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 332)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 2.4ms | Allocations: 656)
+Completed 200 OK in 64ms (Views: 62.0ms | ActiveRecord: 0.4ms | Allocations: 35264)
+
+
+Started GET "/stories" for 127.0.0.1 at 2021-12-12 13:17:38 +0000
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 202)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 4.0ms | Allocations: 914)
+Completed 200 OK in 71ms (Views: 68.7ms | ActiveRecord: 0.7ms | Allocations: 35443)
+
+
+Started GET "/stories" for 127.0.0.1 at 2021-12-12 13:23:25 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 231)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 5.7ms | Allocations: 964)
+Completed 200 OK in 84ms (Views: 80.3ms | ActiveRecord: 0.9ms | Allocations: 35516)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2021-12-12 13:23:26 +0000
+Processing by StoriesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  Rendering stories/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered stories/_form.html.erb (Duration: 6.2ms | Allocations: 1878)
+  Rendered stories/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1938)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 2.8ms | Allocations: 664)
+Completed 200 OK in 73ms (Views: 68.3ms | ActiveRecord: 1.0ms | Allocations: 37331)
+
+
+Started POST "/stories" for 127.0.0.1 at 2021-12-12 13:23:40 +0000
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7v9ngp/b4UJzUmPY3bmFuU4KNMs+zfE4bbOHFjH9brccdN668f+EnNvyK7Hvd/HTlUbszdWct8WpwFpCLsavhA==", "story"=>{"title"=>"Banh da ca Bach Khoa", "location"=>"Ha noi", "food"=>{"name"=>"Banh da ca"}, "content"=>"asd", "recommendation"=>"asd", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f8fe0b25a80 @tempfile=#<Tempfile:/tmp/RackMultipart20211212-3281-1xvqh69.png>, @original_filename="wedding-couple.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"story[image]\"; filename=\"wedding-couple.png\"\r\nContent-Type: image/png\r\n">}, "category"=>"5", "commit"=>"Create Story"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[31mUnpermitted parameter: :food[0m
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."name" = ? LIMIT ?[0m  [["name", "Banh da ca"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFood Create (1.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?)[0m  [["name", "Banh da ca"], ["created_at", "2021-12-12 13:23:40.140910"], ["updated_at", "2021-12-12 13:23:40.140910"], ["category_id", 5]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStory Create (0.5ms)[0m  [1m[32mINSERT INTO "stories" ("title", "content", "location", "user_id", "recommendation", "created_at", "updated_at", "food_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Banh da ca Bach Khoa"], ["content", "asd"], ["location", "Ha noi"], ["user_id", 5], ["recommendation", "asd"], ["created_at", "2021-12-12 13:23:40.151814"], ["updated_at", "2021-12-12 13:23:40.151814"], ["food_id", 13]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Story"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Story"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "21ie1h3f74xpst5i0pi0tyf8dmij"], ["filename", "wedding-couple.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 53299], ["checksum", "GnIM1S+NivYBn51R6XVbiA=="], ["created_at", "2021-12-12 13:23:40.161364"]]
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Story"], ["record_id", 12], ["blob_id", 12], ["created_at", "2021-12-12 13:23:40.163086"]]
+  [1m[36mStory Update (0.2ms)[0m  [1m[33mUPDATE "stories" SET "updated_at" = ? WHERE "stories"."id" = ?[0m  [["updated_at", "2021-12-12 13:23:40.164484"], ["id", 12]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+[36m  Disk Storage (5.4ms) [0m[32mUploaded file to key: 21ie1h3f74xpst5i0pi0tyf8dmij (checksum: GnIM1S+NivYBn51R6XVbiA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: bb1f74dc-f91f-48c1-9036-b61c7f64a049) to Async(default) with arguments: #<GlobalID:0x00007f8fe08e0928 @uri=#<URI::GID gid://food-travels-rails-app/ActiveStorage::Blob/12>>
+Redirected to https://localhost-ductcp-1-it-nihongo3-ruby.paiza-user-free.cloud:3000/stories/12
+Completed 302 Found in 48ms (ActiveRecord: 12.5ms | Allocations: 9344)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bb1f74dc-f91f-48c1-9036-b61c7f64a049] Performing ActiveStorage::AnalyzeJob (Job ID: bb1f74dc-f91f-48c1-9036-b61c7f64a049) from Async(default) enqueued at 2021-12-12T13:23:40Z with arguments: #<GlobalID:0x00007f8fe08c7068 @uri=#<URI::GID gid://food-travels-rails-app/ActiveStorage::Blob/12>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bb1f74dc-f91f-48c1-9036-b61c7f64a049] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: 21ie1h3f74xpst5i0pi0tyf8dmij[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bb1f74dc-f91f-48c1-9036-b61c7f64a049] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bb1f74dc-f91f-48c1-9036-b61c7f64a049]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bb1f74dc-f91f-48c1-9036-b61c7f64a049]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 12]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bb1f74dc-f91f-48c1-9036-b61c7f64a049]   [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bb1f74dc-f91f-48c1-9036-b61c7f64a049] Performed ActiveStorage::AnalyzeJob (Job ID: bb1f74dc-f91f-48c1-9036-b61c7f64a049) from Async(default) in 58.19ms
+Started GET "/stories/12" for 127.0.0.1 at 2021-12-12 13:23:40 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mStory Load (0.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering stories/show.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 15)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."story_id" = ? ORDER BY created_at DESC[0m  [["story_id", 12]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Story"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered stories/show.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1914)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 2.8ms | Allocations: 660)
+Completed 200 OK in 89ms (Views: 80.1ms | ActiveRecord: 2.2ms | Allocations: 38114)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7a0fdbd3920b9a1cb20dcf2669454c6b92b4785a/wedding-couple.png" for 127.0.0.1 at 2021-12-12 13:23:40 +0000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7a0fdbd3920b9a1cb20dcf2669454c6b92b4785a", "filename"=>"wedding-couple"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[36m  Disk Storage (1.2ms) [0m[34mGenerated URL for file at key: 21ie1h3f74xpst5i0pi0tyf8dmij (https://localhost-ductcp-1-it-nihongo3-ruby.paiza-user-free.cloud:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNakZwWlRGb00yWTNOSGh3YzNRMWFUQndhVEIwZVdZNFpHMXBhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kbFpHUnBibWN0WTI5MWNHeGxMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmQyVmtaR2x1WnkxamIzVndiR1V1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjEtMTItMTJUMTM6Mjg6NDAuNTcxWiIsInB1ciI6ImJsb2Jfa2V5In19--855a6262086b91c37fe97656012719d920d2edb2/wedding-couple.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22wedding-couple.png%22%3B+filename%2A%3DUTF-8%27%27wedding-couple.png)[0m
+Redirected to https://localhost-ductcp-1-it-nihongo3-ruby.paiza-user-free.cloud:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNakZwWlRGb00yWTNOSGh3YzNRMWFUQndhVEIwZVdZNFpHMXBhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kbFpHUnBibWN0WTI5MWNHeGxMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmQyVmtaR2x1WnkxamIzVndiR1V1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjEtMTItMTJUMTM6Mjg6NDAuNTcxWiIsInB1ciI6ImJsb2Jfa2V5In19--855a6262086b91c37fe97656012719d920d2edb2/wedding-couple.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22wedding-couple.png%22%3B+filename%2A%3DUTF-8%27%27wedding-couple.png
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 1578)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNakZwWlRGb00yWTNOSGh3YzNRMWFUQndhVEIwZVdZNFpHMXBhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kbFpHUnBibWN0WTI5MWNHeGxMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmQyVmtaR2x1WnkxamIzVndiR1V1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjEtMTItMTJUMTM6Mjg6NDAuNTcxWiIsInB1ciI6ImJsb2Jfa2V5In19--855a6262086b91c37fe97656012719d920d2edb2/wedding-couple.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22wedding-couple.png%22%3B+filename%2A%3DUTF-8%27%27wedding-couple.png" for 127.0.0.1 at 2021-12-12 13:23:40 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"wedding-couple.png\"; filename*=UTF-8''wedding-couple.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhNakZwWlRGb00yWTNOSGh3YzNRMWFUQndhVEIwZVdZNFpHMXBhZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kbFpHUnBibWN0WTI5MWNHeGxMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjbmQyVmtaR2x1WnkxamIzVndiR1V1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkE9PSIsImV4cCI6IjIwMjEtMTItMTJUMTM6Mjg6NDAuNTcxWiIsInB1ciI6ImJsb2Jfa2V5In19--855a6262086b91c37fe97656012719d920d2edb2", "filename"=>"wedding-couple"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 1179)
+
+
+Started GET "/stories" for 127.0.0.1 at 2021-12-12 13:23:44 +0000
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.4ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 266)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 3.6ms | Allocations: 914)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 0.7ms | Allocations: 35545)
+
+
+Started GET "/stories" for 127.0.0.1 at 2021-12-12 13:24:14 +0000
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 241)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 4.8ms | Allocations: 914)
+Completed 200 OK in 72ms (Views: 69.7ms | ActiveRecord: 0.7ms | Allocations: 35494)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-12 13:24:22 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 332)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  Rendered layouts/_navigation.html.erb (Duration: 2.5ms | Allocations: 656)
+Completed 200 OK in 77ms (Views: 74.6ms | ActiveRecord: 0.5ms | Allocations: 35269)
+
+

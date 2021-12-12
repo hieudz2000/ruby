@@ -1,0 +1,82 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.center {
+  height: 540px;
+  background-image: url(asset_path('cover'));
+  background-size: cover;
+  color: white;
+}
+.share-font {
+  height: 50%;
+  background-image: url(asset_path('share-font'));
+  background-size: cover;
+  color: white;
+  margin-top: 10px;
+  align:center;
+}
+.title {
+  text-align: center;
+}
+
+.header-h1 {
+  margin: 0;
+  font-size: 4em;
+  white-space: nowrap;
+}
+
+.header-h4 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.under1 {
+  height: 300px;
+  background-image: url(asset_path('food-1'));
+  background-size: cover;
+  color: white;
+  margin-top: 20px;
+}
+
+.under2 {
+  height: 300px;
+  background-image: url(asset_path('food-2'));
+  background-size: cover;
+  color: white;
+  margin-top: 20px;
+}
+
+.under3 {
+  height: 300px;
+  background-image: url(asset_path('food-3'));
+  background-size: cover;
+  color: white;
+  margin-top: 20px;
+}
+
+.under4 {
+  height: 300px;
+  background-image: url(asset_path('food-4'));
+  background-size: cover;
+  color: white;
+  margin-top: 20px;
+}
+
+.under5 {
+  height: 300px;
+  background-image: url(asset_path('food-5'));
+  background-size: cover;
+  color: white;
+  margin-top: 20px;
+}
+
+.under6 {
+  height: 300px;
+  background-image: url(asset_path('food-6'));
+  background-size: cover;
+  color: white;
+  margin-top: 20px;
+}
+
+

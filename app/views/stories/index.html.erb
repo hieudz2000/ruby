@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="well col-sm-12">
+    <%= link_to "Filter by category", filter_story_category_path, class: "btn btn-default" %>
+    <%= link_to "Filter by food", filter_story_food_path, class: "btn btn-default" %>
+    <%=  @name %>
+    <% @stories.each do |fstory| %>
+        <div class="well well-white">
+          <h5><b><%= link_to fstory.title, story_path(fstory) %></b></h5>
+          <p></p>
+        </div>
+    <% end %>
+  </div>
+</div>

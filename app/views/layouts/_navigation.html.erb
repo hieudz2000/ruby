@@ -1,0 +1,68 @@
+<div class="mt-5 p-3">
+  <div class = "container-fluid">
+    <div class="row">
+        <% if !user_signed_in? %>
+        <div class="col-4">
+          <ul class="nav">
+              <li class="nav-item">
+                <%= link_to 'Home', root_url, class:"nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'Food Stories', stories_path , class:"nav-link" %>
+              </li>
+          </ul>
+        </div>
+        <div class="col-8">
+          <div class="menu float-right">
+              <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <%= link_to "Sign Up", new_user_registration_path, class:"nav-link" %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to "Sign In", new_user_session_path, class:"nav-link" %>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <%else%>
+        <div class="col-8">
+          <ul class="nav " >
+              <li class="nav-item">
+                <%= link_to 'Home', root_url, class:"nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'Food Stories', stories_path , class:"nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "Add a Food Story", new_story_path,class:"nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "Add category", new_category_path, class:"nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "View all category", categories_path,class:"nav-link" %>
+              </li>
+          </ul>
+        </div>
+        <div class= "col-4 ">
+          <!-- Default dropstart button -->
+          <div class="btn-group dropstart float-right mx-5">
+              <div type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <% if current_user.avatar.present? %>
+                  <%= image_tag(current_user.avatar, :size => "50x50") %>
+                <% end %> <br>
+              </div>
+              <ul class="dropdown-menu">
+                <li class="nav-item">
+                <li><%= link_to "Edit Profile", edit_user_registration_path(current_user),class:"nav-link" %></li>
+                </li>
+                <li class="nav-item">
+                    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <%end%>
+    </div>
+  </div>
+</div>

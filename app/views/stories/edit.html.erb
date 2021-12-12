@@ -1,0 +1,43 @@
+<div class="container">
+  <div class=" well col-sm-6">
+    <h2>Edit Your Food Story</h2><br>
+    <%= form_for(@story) do |story_builder| %>
+      <%= render 'shared/error_messages' %>
+
+      <p>
+        <%= story_builder.label :title %>
+        <%= story_builder.text_field :title, class: 'form-control' %><br>
+      </p>
+
+      <p>
+        <%= story_builder.label :location %>
+        <%= story_builder.text_field :location, class: 'form-control' %><br>
+      </p>
+
+      <p><strong>Food Name: </strong><span class="storyFoodName"><%= @story.food.name %></span>
+      
+      <p><strong>Type of Food: </strong><span class="storyFoodName"><%= @story.food.category.name %></span>
+      
+      <p>
+        <%= story_builder.label :content %>
+        <%= story_builder.text_area :content, rows: 10, class: 'form-control' %><br>
+      </p>
+      
+      <p><strong>Recommendations</strong><%= story_builder.text_field :recommendation, class: 'form-control' %><br></p>
+      
+      <p>
+        <%= story_builder.label :image %>
+        <%= story_builder.file_field :image, class: 'form-control' %><br>
+      </p>
+      
+      
+      <%= story_builder.submit "Update Story", class: "btn btn-md btn-primary" %>
+    <% end %>
+  </div>
+  
+  <div class=" well col-sm-6">
+    <% if @story.image.present? %>
+      <%= image_tag(@story.image,:size => "530x360") %>
+    <% end %> <br>
+  </div>
+</div>
